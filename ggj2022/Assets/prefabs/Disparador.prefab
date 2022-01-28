@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7885407853360430296}
   - component: {fileID: 7885407853360430297}
   - component: {fileID: 7885407853360430886}
-  - component: {fileID: 7885407853360430887}
   - component: {fileID: 7885407853360430884}
+  - component: {fileID: 1963588803732456575}
   m_Layer: 0
   m_Name: Disparador
   m_TagString: Enemy
@@ -126,22 +126,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &7885407853360430887
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7885407853360430885}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.023116976, y: 0.0062379166}
-  m_Size: {x: 0.10707241, y: 0.155508}
-  m_Direction: 0
 --- !u!114 &7885407853360430884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +145,19 @@ MonoBehaviour:
   Enemy_scream: {fileID: 0}
   Enemy_death: {fileID: 0}
   tiempo_de_disparo: 2
+--- !u!58 &1963588803732456575
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7885407853360430885}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.08

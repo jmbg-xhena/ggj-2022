@@ -154,9 +154,10 @@ public class habilidades_jugador : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") && !invencible) {
+        GameObject go = collision.gameObject;
+        if ((go.CompareTag("Enemy") || go.CompareTag("Spikes")|| go.CompareTag("ProjectileEnemy")) && !invencible) {
             if (demonio.modo_demonio)
             {
                 if (mp > mp_loss_enemy_damage)

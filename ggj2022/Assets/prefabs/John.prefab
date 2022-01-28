@@ -198,8 +198,8 @@ MonoBehaviour:
   hp_loss_over_time: 2
   mp_loss_melee_atack: 3
   hp_loss_melee_atack: 4
-  mp_loss_enemy_damage: 4
-  hp_loss_enemy_damage: 5
+  mp_loss_enemy_damage: 1
+  hp_loss_enemy_damage: 2
 --- !u!114 &5071098094738880921
 MonoBehaviour:
   m_ObjectHideFlags: 0
