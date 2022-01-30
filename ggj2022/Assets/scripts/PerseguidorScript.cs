@@ -15,6 +15,7 @@ public class PerseguidorScript : MonoBehaviour
     private Transform target;
     private GameObject player;
     private float LastHit;
+    public bool stunted;
     
     //Sustituir JohnMovement por habilidades_jugador -------
     //private JohnMovement target;
@@ -37,7 +38,7 @@ public class PerseguidorScript : MonoBehaviour
     {
 
         //Verifica si el jugador todavia vive
-        if (player == null) 
+        if (player == null || stunted) 
         {
             return;
         }
@@ -66,6 +67,12 @@ public class PerseguidorScript : MonoBehaviour
             
         }
     }
+    public void Des_stunt()
+    {
+        GetComponent<Animator>().speed = 1;
+        stunted = false;
+        this.gameObject.tag = "Enemy";
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -88,6 +95,33 @@ public class PerseguidorScript : MonoBehaviour
                 LastHit = Time.time;
             }
             
+        }
+
+        if (!stunted)
+        {
+            if (collision.CompareTag("Player"))
+            {
+                StopAllCoroutines();
+                GetComponent<Animator>().Play("atacar");
+            }
+
+            if (collision.CompareTag("WeaponPlayer"))
+            {
+                Destroy(this.gameObject);
+            }
+
+            if (collision.CompareTag("Stunt"))
+            {
+                stunted = true;
+                StopAllCoroutines();
+                Invoke("Des_stunt", 1f);
+                this.gameObject.tag = "Untagged";
+                GetComponent<Animator>().speed = 0;
+            }
+        }
+        else
+        {
+            Invoke("Des_stunt", 1f);
         }
     }
 

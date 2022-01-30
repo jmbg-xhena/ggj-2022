@@ -11,6 +11,7 @@ public class DesplazarEnemigoVertical : MonoBehaviour
 	public float Velocidad = 1f;
 
 	private GameObject _LugarObjetivo;
+	public bool stunted;
 
 
 	// Se llama al inicio antes de la primera actualización de frames
@@ -18,12 +19,15 @@ public class DesplazarEnemigoVertical : MonoBehaviour
     {
 		UpdateObjetivo();
 		StartCoroutine("Patrullar");
+		stunted = false;
 	}
 
 	// La actualización se llama una vez por cuadro
 	void Update()
     {
-        
+		if (stunted) {
+			StopAllCoroutines();
+		}
     }
 
 
@@ -76,5 +80,48 @@ public class DesplazarEnemigoVertical : MonoBehaviour
 		//Debug.Log("Se espera lo necesario para que termine y vuelva a empezar movimiento");
 		UpdateObjetivo();
 		StartCoroutine("Patrullar");
+	}
+
+	public void Des_stunt()
+	{
+		GetComponent<Animator>().speed = 1;
+		stunted = false;
+		this.gameObject.tag = "Enemy";
+		UpdateObjetivo();
+		StartCoroutine("Patrullar");
+	}
+	public void Resume_patrullaje()
+	{
+		StartCoroutine("Patrullar");
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (!stunted)
+		{
+			if (collision.CompareTag("Player"))
+			{
+				StopAllCoroutines();
+				GetComponent<Animator>().Play("atack");
+			}
+
+			if (collision.CompareTag("WeaponPlayer"))
+			{
+				Destroy(this.gameObject);
+			}
+
+			if (collision.CompareTag("Stunt"))
+			{
+				stunted = true;
+				StopAllCoroutines();
+				GetComponent<Animator>().speed = 0;
+				Invoke("Des_stunt", 1f);
+				this.gameObject.tag = "Untagged";
+			}
+		}
+		else
+		{
+			Invoke("Des_stunt", 1f);
+		}
 	}
 }

@@ -74,9 +74,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.9622642, g: 0.6791952, b: 0.049928807, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -1326110660968864685, guid: aa1cc48712a16de4e9a913716dcbc2ac, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 6811205694637005348}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 04f87692111e3214c89ac8722f30c53b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   Hit_Sound: {fileID: 8300000, guid: c0f4ee757e4ef6b43b6bcd742c83b2a6, type: 3}
   Bullet_Dmg_Sound: {fileID: 8300000, guid: 413810f38fae660438bb565124024327, type: 3}
   Speed: 2
-  bullet_damage: 1
+  bullet_damage: 0.2
 --- !u!50 &6811205694637005346
 Rigidbody2D:
   serializedVersion: 4
@@ -156,6 +156,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.04, y: 0}
   serializedVersion: 2
   m_Radius: 0.04

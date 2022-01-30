@@ -29,6 +29,7 @@ public class habilidades_jugador : MonoBehaviour
     public float shield_time = 0.5f;
     public float cooldown_shield;
     public bool puede_usar_shield;
+    public bool usando_escudo = false;
 
     [Header("invencibilidad")]
     public bool invencible;
@@ -57,6 +58,7 @@ public class habilidades_jugador : MonoBehaviour
         invencible = false;
         demonio.berserker = false;
         recibiendo_danho = false;
+        usando_escudo = false;
         puede_usar_weapon = true;
         puede_usar_shield = true;
         mp = max_mp;
@@ -71,9 +73,11 @@ public class habilidades_jugador : MonoBehaviour
         if (demonio.modo_demonio) //habilidades demonio
         {
             Drenado_barra_demonio();
+            weapon.tag = "WeaponPlayer";
         }
         else //habilidades angel
         {
+            weapon.tag = "Stunt";
             Shield_protecction();
             Recuperar_Barra_demonio_over_time(mp_a_recuperar_over_time);// recuperar barra de demonio estando en modo angel
         }
@@ -122,6 +126,7 @@ public class habilidades_jugador : MonoBehaviour
     void Shield_protecction() {
         if (Input.GetKeyDown(KeyCode.Q) && puede_usar_shield && !weapon.activeSelf) {
             puede_usar_shield = false;//activar cooldown
+            usando_escudo = true;
             shield.SetActive(true);//activar arma
             Invoke("Desactivar_escudo", shield_time);//mandar a desactivar el arma
         }
@@ -143,6 +148,7 @@ public class habilidades_jugador : MonoBehaviour
     void Desactivar_escudo()
     {
         shield.SetActive(false);
+        usando_escudo = false;
         Invoke("End_cooldown_escudo", cooldown_shield);
     }
 

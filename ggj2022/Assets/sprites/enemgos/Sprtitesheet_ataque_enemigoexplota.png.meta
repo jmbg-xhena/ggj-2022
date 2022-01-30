@@ -1,0 +1,564 @@
+fileFormatVersion: 2
+guid: 2099d3f169f898a4aaabea5fcde6a654
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6735130608037872143
+    second: Sprtitesheet_ataque_enemigoexplota_0
+  - first:
+      213: -1196433152279394831
+    second: Sprtitesheet_ataque_enemigoexplota_1
+  - first:
+      213: 8937080386316974885
+    second: Sprtitesheet_ataque_enemigoexplota_2
+  - first:
+      213: -2501184653468322233
+    second: Sprtitesheet_ataque_enemigoexplota_3
+  - first:
+      213: -4215937755814605953
+    second: Sprtitesheet_ataque_enemigoexplota_4
+  - first:
+      213: 817103011218116144
+    second: Sprtitesheet_ataque_enemigoexplota_5
+  - first:
+      213: 632899700227121526
+    second: Sprtitesheet_ataque_enemigoexplota_6
+  - first:
+      213: -2628293092446578466
+    second: Sprtitesheet_ataque_enemigoexplota_7
+  - first:
+      213: -5001397814020771765
+    second: Sprtitesheet_ataque_enemigoexplota_8
+  - first:
+      213: -1501565604275517527
+    second: Sprtitesheet_ataque_enemigoexplota_9
+  - first:
+      213: -1160837231386294894
+    second: Sprtitesheet_ataque_enemigoexplota_10
+  - first:
+      213: 1805969739222836123
+    second: Sprtitesheet_ataque_enemigoexplota_11
+  - first:
+      213: -682038798117484433
+    second: Sprtitesheet_ataque_enemigoexplota_12
+  - first:
+      213: 1617544218517709417
+    second: Sprtitesheet_ataque_enemigoexplota_13
+  - first:
+      213: 1166325167574605619
+    second: Sprtitesheet_ataque_enemigoexplota_15
+  - first:
+      213: -6324699210762708111
+    second: Sprtitesheet_ataque_enemigoexplota_16
+  - first:
+      213: -370295199018179413
+    second: Sprtitesheet_ataque_enemigoexplota_17
+  - first:
+      213: 7192302443934527816
+    second: Sprtitesheet_ataque_enemigoexplota_18
+  - first:
+      213: 2171559858852474173
+    second: Sprtitesheet_ataque_enemigoexplota_20
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 4000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4102
+        width: 882
+        height: 820
+      alignment: 9
+      pivot: {x: 0.4630859, y: 0.385847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdba0075620882a0800000000000000
+      internalID: -6735130608037872143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_1
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 4101.6665
+        width: 881.5
+        height: 820.3333
+      alignment: 9
+      pivot: {x: 0.38457757, y: 0.32635957}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5c2e0136a656fe0800000000000000
+      internalID: -1196433152279394831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_2
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 4102
+        width: 772
+        height: 820
+      alignment: 9
+      pivot: {x: 0.4709751, y: 0.34117758}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52bb88bb243e60c70800000000000000
+      internalID: 8937080386316974885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_3
+      rect:
+        serializedVersion: 2
+        x: 2547
+        y: 4102
+        width: 631
+        height: 820
+      alignment: 9
+      pivot: {x: 0.5, y: 0.37095737}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746bc5c3fc10a4dd0800000000000000
+      internalID: -2501184653468322233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3281.6667
+        width: 881.5
+        height: 820.3333
+      alignment: 9
+      pivot: {x: 0.51385075, y: 0.49999923}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b4385b2fafd75c0800000000000000
+      internalID: -4215937755814605953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_5
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 3286
+        width: 882
+        height: 820
+      alignment: 9
+      pivot: {x: 0.39380866, y: 0.5049403}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ece880cdee65b00800000000000000
+      internalID: 817103011218116144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_6
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 3282
+        width: 650
+        height: 820
+      alignment: 9
+      pivot: {x: 0.5763984, y: 0.45038587}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6712d729ce288c800800000000000000
+      internalID: 632899700227121526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_7
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 3282
+        width: 761
+        height: 820
+      alignment: 9
+      pivot: {x: 0.5175839, y: 0.43550608}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8db139b5d668bd0800000000000000
+      internalID: -2628293092446578466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2461.6667
+        width: 881.5
+        height: 820.3333
+      alignment: 9
+      pivot: {x: 0.4849473, y: 0.55176014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4070eacf27779ab0800000000000000
+      internalID: -5001397814020771765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_9
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 2461.6667
+        width: 881.5
+        height: 820.3333
+      alignment: 9
+      pivot: {x: 0.46387357, y: 0.567935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7863ed90e592be0800000000000000
+      internalID: -1501565604275517527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_10
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 2464
+        width: 882
+        height: 820
+      alignment: 9
+      pivot: {x: 0.37050775, y: 0.54974365}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2950c2d30b0e3efe0800000000000000
+      internalID: -1160837231386294894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_11
+      rect:
+        serializedVersion: 2
+        x: 2643
+        y: 2461.6667
+        width: 881.5
+        height: 820.3333
+      alignment: 9
+      pivot: {x: 0.33516532, y: 0.5501295}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b936b7dc8e7101910800000000000000
+      internalID: 1805969739222836123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1641.6667
+        width: 881.5
+        height: 820.3333
+      alignment: 9
+      pivot: {x: 0.5175426, y: 0.575403}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f684c23a359e886f0800000000000000
+      internalID: -682038798117484433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_13
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 1647
+        width: 882
+        height: 820
+      alignment: 9
+      pivot: {x: 0.54428923, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9622c3985eba27610800000000000000
+      internalID: 1617544218517709417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_15
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 1647
+        width: 882
+        height: 820
+      alignment: 9
+      pivot: {x: 0.62104034, y: 0.46366742}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33fd1e97f8e9f2010800000000000000
+      internalID: 1166325167574605619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_16
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 816
+        width: 530
+        height: 820
+      alignment: 9
+      pivot: {x: 0.524203, y: 0.45567685}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b9b47d3972a38a0800000000000000
+      internalID: -6324699210762708111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_17
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 833
+        width: 722
+        height: 820
+      alignment: 9
+      pivot: {x: 0.5245397, y: 0.38544014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba42d787a727cdaf0800000000000000
+      internalID: -370295199018179413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_18
+      rect:
+        serializedVersion: 2
+        x: 2275
+        y: 827
+        width: 971
+        height: 820
+      alignment: 9
+      pivot: {x: 0.5725847, y: 0.37223393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84134ef57f030d360800000000000000
+      internalID: 7192302443934527816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtitesheet_ataque_enemigoexplota_20
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 11
+        width: 942
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d266baf2ee22e10800000000000000
+      internalID: 2171559858852474173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

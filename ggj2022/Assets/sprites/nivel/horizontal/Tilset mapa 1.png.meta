@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: 14e0e3484aea86f418e2d8ac3e31f426
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7908422512683178394
+    second: Tilset mapa 1_0
+  - first:
+      213: -2234321816093403263
+    second: Tilset mapa 1_1
+  - first:
+      213: 262300622077217039
+    second: Tilset mapa 1_2
+  - first:
+      213: 8515572779659839696
+    second: Tilset mapa 1_3
+  - first:
+      213: 7761498941984081708
+    second: Tilset mapa 1_4
+  - first:
+      213: 7514731174844658143
+    second: Tilset mapa 1_5
+  - first:
+      213: -3835648709957231659
+    second: Tilset mapa 1_6
+  - first:
+      213: 5699694693385497397
+    second: Tilset mapa 1_7
+  - first:
+      213: 8755105450014733526
+    second: Tilset mapa 1_8
+  - first:
+      213: 6641201213917165262
+    second: Tilset mapa 1_9
+  - first:
+      213: 6346754895595956104
+    second: Tilset mapa 1_10
+  - first:
+      213: -796049194089344570
+    second: Tilset mapa 1_11
+  - first:
+      213: -4073613429896778343
+    second: Tilset mapa 1_12
+  - first:
+      213: 945872522819667789
+    second: Tilset mapa 1_13
+  - first:
+      213: 7180881850944689691
+    second: Tilset mapa 1_14
+  - first:
+      213: -3403614560957375104
+    second: Tilset mapa 1_15
+  - first:
+      213: -2503759323734776501
+    second: Tilset mapa 1_16
+  - first:
+      213: -646576388232973285
+    second: Tilset mapa 1_17
+  - first:
+      213: 3353542362478556481
+    second: Tilset mapa 1_18
+  - first:
+      213: 5883777733342243989
+    second: Tilset mapa 1_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 570
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tilset mapa 1_0
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 4887
+        width: 604
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99de2aef5c50cd60800000000000000
+      internalID: 7908422512683178394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_1
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 4890
+        width: 784
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187d8dd65281ef0e0800000000000000
+      internalID: -2234321816093403263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_2
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 4847
+        width: 502
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09c64ba601e3a300800000000000000
+      internalID: 262300622077217039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_3
+      rect:
+        serializedVersion: 2
+        x: 2487
+        y: 4844
+        width: 895
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d84c9e53546d2670800000000000000
+      internalID: 8515572779659839696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_4
+      rect:
+        serializedVersion: 2
+        x: 3518
+        y: 4884
+        width: 626
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2708816a2266bb60800000000000000
+      internalID: 7761498941984081708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_5
+      rect:
+        serializedVersion: 2
+        x: 4184
+        y: 4882
+        width: 596
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd17b235030b94860800000000000000
+      internalID: 7514731174844658143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_6
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 4469
+        width: 281
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db50d702d905cac0800000000000000
+      internalID: -3835648709957231659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_7
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 4361
+        width: 1056
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53beb671022691f40800000000000000
+      internalID: 5699694693385497397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_8
+      rect:
+        serializedVersion: 2
+        x: 2162
+        y: 4361
+        width: 480
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4f63f2502608970800000000000000
+      internalID: 8755105450014733526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_9
+      rect:
+        serializedVersion: 2
+        x: 2887
+        y: 4453
+        width: 426
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6fc6541594a2c50800000000000000
+      internalID: 6641201213917165262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_10
+      rect:
+        serializedVersion: 2
+        x: 3410
+        y: 4415
+        width: 987
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 887e77473f3341850800000000000000
+      internalID: 6346754895595956104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_11
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 3175
+        width: 416
+        height: 1086
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c19192c97dd3f4f0800000000000000
+      internalID: -796049194089344570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_12
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 3175
+        width: 1362
+        height: 1086
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99dedbe1b2e9777c0800000000000000
+      internalID: -4073613429896778343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_13
+      rect:
+        serializedVersion: 2
+        x: 2844
+        y: 3175
+        width: 1623
+        height: 1086
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47087d4c0a602d00800000000000000
+      internalID: 945872522819667789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_14
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1916
+        width: 690
+        height: 1086
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b169b9b5ffd97a360800000000000000
+      internalID: 7180881850944689691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_15
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 1916
+        width: 713
+        height: 1086
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08dd9c5079ee3c0d0800000000000000
+      internalID: -3403614560957375104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_16
+      rect:
+        serializedVersion: 2
+        x: 2095
+        y: 1916
+        width: 371
+        height: 1086
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4567b9192cd04dd0800000000000000
+      internalID: -2503759323734776501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_17
+      rect:
+        serializedVersion: 2
+        x: 2658
+        y: 1900
+        width: 1739
+        height: 1129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14f73b5336e607f0800000000000000
+      internalID: -646576388232973285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_18
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 481
+        width: 1928
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14532c6c20d2a8e20800000000000000
+      internalID: 3353542362478556481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilset mapa 1_19
+      rect:
+        serializedVersion: 2
+        x: 2534
+        y: 487
+        width: 1921
+        height: 1081
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ca735cca067a150800000000000000
+      internalID: 5883777733342243989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
