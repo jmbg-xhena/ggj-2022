@@ -24,7 +24,7 @@ public class PerseguidorScript : MonoBehaviour
     private void Start()
     {
         //Sustituir JohnMovement por habilidades_jugador -------
-        player = GameObject.FindObjectOfType<JohnMovement>().gameObject;
+        player = GameObject.FindObjectOfType<habilidades_jugador>().gameObject;
         target = player.GetComponent<Transform>();
 
         //Obtiene la posicion del jugador, ustituir JohnMovement por habilidades_jugador -------
@@ -71,7 +71,7 @@ public class PerseguidorScript : MonoBehaviour
     {
         //Se ataca al jugador al colisionar
         //Sustituir JohnMovement por habilidades_jugador -------
-        JohnMovement player = collision.GetComponent<JohnMovement>();
+        habilidades_jugador player = collision.GetComponent<habilidades_jugador>();
 
         //Se puede colocar un if aqui para verificar si la colision es con el jugador o con alguna colision de ataque del jugador
 

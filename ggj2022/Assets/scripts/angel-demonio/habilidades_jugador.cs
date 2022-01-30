@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class habilidades_jugador : MonoBehaviour
 {
@@ -43,10 +44,12 @@ public class habilidades_jugador : MonoBehaviour
     [Header("enemy damage")]
     public float mp_loss_enemy_damage;
     public float hp_loss_enemy_damage;
+    private Rigidbody2D rigidbody; 
 
     // Start is called before the first frame update
     void Start()
     {
+        rigidbody = GetComponent<Rigidbody2D>();
         demonio = GetComponent<Modo_demonio>();
         demonio.modo_demonio = false;
         invencible = false;
@@ -174,6 +177,24 @@ public class habilidades_jugador : MonoBehaviour
             }
             invencible = true;
             Invoke("Deshacer_invencible",tiempo_invencible);
+        }
+    }
+
+    public void Knock(Rigidbody2D rb, float knockTime, float thrustForce)
+    {
+        Vector3 difference = rb.transform.position - transform.position;
+        difference = difference.normalized * thrustForce;
+        rigidbody.DOMove(rb.transform.position - difference, knockTime);
+        StartCoroutine(KnockCo(rigidbody, knockTime));
+    }
+
+    private IEnumerator KnockCo(Rigidbody2D rb, float knockTime)
+    {
+        if (rb != null)
+        {
+            yield return new WaitForSeconds(knockTime);
+            rb.velocity = Vector2.zero;
+            rb.velocity = Vector2.zero;
         }
     }
 }
