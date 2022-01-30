@@ -49,6 +49,14 @@ public class habilidades_jugador : MonoBehaviour
     private Rigidbody2D rigidbody;
     public bool recibiendo_danho = false;
     public bool muerto = false;
+    
+
+    [Header("sonidos")]
+    public AudioClip jugador_derrotado;
+    public AudioClip jugador_ouch;
+    public AudioClip jugador_woosh;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -81,6 +89,7 @@ public class habilidades_jugador : MonoBehaviour
         demonio.Cambiar_modo();
         if (demonio.modo_demonio) //habilidades demonio
         {
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(jugador_derrotado);
             Drenado_barra_demonio();
             weapon.tag = "WeaponPlayer";
         }
@@ -116,6 +125,7 @@ public class habilidades_jugador : MonoBehaviour
 
             if (demonio.modo_demonio)
             {//ataque fuerte
+                Camera.main.GetComponent<AudioSource>().PlayOneShot(jugador_woosh);
                 if (mp > mp_loss_melee_atack)//si la barra demonio no esta vacia
                 {
                     mp -= mp_loss_melee_atack;//perder barra de demonio con el ataque
@@ -199,6 +209,7 @@ public class habilidades_jugador : MonoBehaviour
                     mp -= mp_loss_enemy_damage;
                 }
                 else {
+                    Camera.main.GetComponent<AudioSource>().PlayOneShot(jugador_ouch);
                     hp -= hp_loss_enemy_damage - mp;//usar barra de vida cuando la de demonio se acabe
                     mp = 0;
                 }

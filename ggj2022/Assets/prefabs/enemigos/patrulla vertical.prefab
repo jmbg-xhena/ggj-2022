@@ -101,6 +101,8 @@ MonoBehaviour:
   maxY: -1
   TiempoEspera: 0.5
   Velocidad: 1.5
+  Enemy_death: {fileID: 8300000, guid: 2818a795ce7b556408c83217f37d6dc8, type: 3}
+  stunted: 0
 --- !u!70 &2035497220263198449
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

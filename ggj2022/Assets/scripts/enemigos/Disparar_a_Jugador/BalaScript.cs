@@ -6,7 +6,6 @@ public class BalaScript : MonoBehaviour
 {
     public AudioClip Sound;
     public AudioClip Hit_Sound;
-    public AudioClip Bullet_Dmg_Sound;
     public float Speed;
     public float bullet_damage;
     //public float Time_to_Destroy;
@@ -42,6 +41,7 @@ public class BalaScript : MonoBehaviour
     public void DestroyBullet()
     {
         Destroy(gameObject);
+        Camera.main.GetComponent<AudioSource>().PlayOneShot(Hit_Sound);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -53,7 +53,6 @@ public class BalaScript : MonoBehaviour
             //player.Hit(); //Aqui se definira el efecto del danio del proyectil, se requiere saber cual sera el valor que controlara el HP y como se accedera
             Debug.Log("Hit!!");
             Camera.main.GetComponent<AudioSource>().PlayOneShot(Bullet_Dmg_Sound);
-            Camera.main.GetComponent<AudioSource>().PlayOneShot(Hit_Sound);
             //player.hp -= bullet_damage;
             DestroyBullet();
         }*/

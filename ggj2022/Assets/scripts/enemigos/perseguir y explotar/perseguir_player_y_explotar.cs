@@ -16,6 +16,9 @@ public class perseguir_player_y_explotar : MonoBehaviour
     private GameObject target;
     public bool lanzado;
     public bool stunted;
+    public AudioClip se_lanza;
+    public AudioClip explota;
+    public AudioClip Enemy_death;
 
     [SerializeField]
     private AnimationCurve curve;
@@ -43,6 +46,7 @@ public class perseguir_player_y_explotar : MonoBehaviour
             if (!lanzado) {
 
                 GetComponent<Animator>().Play("iniciar lanzarse");
+                Camera.main.GetComponent<AudioSource>().PlayOneShot(se_lanza);
                 lanzado = true;
             }
         }
@@ -56,6 +60,7 @@ public class perseguir_player_y_explotar : MonoBehaviour
 
             explotado = true;
             GetComponent<Animator>().Play("explotar");
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(explota);
             //area_explosion.SetActive(true);
         }
 
@@ -90,6 +95,7 @@ public class perseguir_player_y_explotar : MonoBehaviour
             {
                 GetComponent<Animator>().Play("morir");
                 Destroy(this.gameObject);
+                Camera.main.GetComponent<AudioSource>().PlayOneShot(Enemy_death);
             }
 
             if (collision.CompareTag("Stunt"))

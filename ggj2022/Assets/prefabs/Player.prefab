@@ -103,7 +103,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.8, y: 10.8}
+    oldSize: {x: 0.27, y: 0.27}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -523,6 +523,7 @@ MonoBehaviour:
   shield_time: 0.5
   cooldown_shield: 0.5
   puede_usar_shield: 0
+  usando_escudo: 0
   invencible: 0
   tiempo_invencible: 0.2
   mp_loss_over_time: 1
@@ -532,6 +533,9 @@ MonoBehaviour:
   mp_loss_enemy_damage: 1
   hp_loss_enemy_damage: 2
   recibiendo_danho: 0
+  jugador_derrotado: {fileID: 8300000, guid: 4b7cbe21a24cf20458c22e797558250a, type: 3}
+  jugador_ouch: {fileID: 8300000, guid: 6a688f18f54c0974baa89d4f093b19bc, type: 3}
+  jugador_woosh: {fileID: 8300000, guid: f39978cfcf424bb4487cccbb23593df7, type: 3}
 --- !u!114 &262204349768167837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,3 +552,5 @@ MonoBehaviour:
   berserker: 0
   puede_cambiar_de_modo: 0
   cool_down_cambio_de_modo: 1
+  a_demonio: {fileID: 8300000, guid: 1b829f3e2c317d245ace8761424271da, type: 3}
+  a_angel: {fileID: 8300000, guid: 2abd5f636b81e3049bb8bc5a7f1a221b, type: 3}

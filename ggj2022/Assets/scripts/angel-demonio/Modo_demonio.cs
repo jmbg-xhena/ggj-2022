@@ -8,6 +8,8 @@ public class Modo_demonio : MonoBehaviour
     public bool berserker = false;
     public bool puede_cambiar_de_modo;
     public float cool_down_cambio_de_modo;
+    public AudioClip a_demonio;
+    public AudioClip a_angel;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,12 @@ public class Modo_demonio : MonoBehaviour
                 if (modo_demonio)
                 {
                     berserker = false;
+                    //a angel
+                    Camera.main.GetComponent<AudioSource>().PlayOneShot(a_angel);
+                }else
+                {
+                    //a demonio
+                    Camera.main.GetComponent<AudioSource>().PlayOneShot(a_demonio);
                 }
                 modo_demonio = !modo_demonio;
                 puede_cambiar_de_modo = false;

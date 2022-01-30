@@ -117,9 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7c71280865df84f80493622a18feca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sound: {fileID: 8300000, guid: b526abde125f649409569a92f3146e83, type: 3}
-  Hit_Sound: {fileID: 8300000, guid: c0f4ee757e4ef6b43b6bcd742c83b2a6, type: 3}
-  Bullet_Dmg_Sound: {fileID: 8300000, guid: 413810f38fae660438bb565124024327, type: 3}
+  Sound: {fileID: 8300000, guid: d7bc85503eacd964b862bc60d5238116, type: 3}
+  Hit_Sound: {fileID: 8300000, guid: eff39dfd7e64efd4a97cb2e0ff3c5bcb, type: 3}
   Speed: 2
   bullet_damage: 0.2
 --- !u!50 &6811205694637005346

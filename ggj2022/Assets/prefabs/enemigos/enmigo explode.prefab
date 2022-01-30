@@ -153,6 +153,10 @@ MonoBehaviour:
   distancia_deteccion: 2
   area_explosion: {fileID: 5677065810073579939}
   lanzado: 0
+  stunted: 0
+  se_lanza: {fileID: 8300000, guid: d7bc85503eacd964b862bc60d5238116, type: 3}
+  explota: {fileID: 8300000, guid: eff39dfd7e64efd4a97cb2e0ff3c5bcb, type: 3}
+  Enemy_death: {fileID: 8300000, guid: 2818a795ce7b556408c83217f37d6dc8, type: 3}
   curve:
     serializedVersion: 2
     m_Curve:
