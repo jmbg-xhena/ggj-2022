@@ -31,9 +31,9 @@ public class Movimiento_Jugador : MonoBehaviour
 
     void Update()
     {
-        if (!habilidades.atacando)
+        if (!habilidades.usando_escudo)
         {
-            if (!habilidades.recibiendo_danho)
+            if (!habilidades.atacando)
             {
                 if (habilidades.demonio.modo_demonio && !habilidades.demonio.berserker)
                 {
@@ -53,7 +53,7 @@ public class Movimiento_Jugador : MonoBehaviour
 
                 if (!habilidades.demonio.modo_demonio)
                 {
-                    if (!is_jumping && Grounded)
+                    if (!is_jumping && Grounded && !habilidades.recibiendo_danho)
                     {
                         if (horizontal == 0.0f)
                         {
@@ -67,7 +67,7 @@ public class Movimiento_Jugador : MonoBehaviour
                 }
                 else
                 {
-                    if (!is_jumping && Grounded)
+                    if (!is_jumping && Grounded && !habilidades.recibiendo_danho)
                     {
                         if (horizontal == 0.0f)
                         {
@@ -80,7 +80,7 @@ public class Movimiento_Jugador : MonoBehaviour
                     }
                 }
 
-                if (is_jumping && Grounded && puede_aterrizar)
+                if (is_jumping && Grounded && puede_aterrizar && !habilidades.recibiendo_danho)
                 {
                     if (habilidades.demonio.modo_demonio)
                     {
@@ -102,7 +102,7 @@ public class Movimiento_Jugador : MonoBehaviour
                 {
                     Grounded = false;
                     puede_aterrizar = true;
-                    if (!is_jumping)
+                    if (!is_jumping && !habilidades.recibiendo_danho)
                     {
                         if (habilidades.demonio.modo_demonio)
                         {
@@ -110,12 +110,12 @@ public class Movimiento_Jugador : MonoBehaviour
                         }
                         else
                         {
-                            animator.Play("in_air_demon");// en aire angel
+                            animator.Play("falling_angel");// en aire angel
                         }
                     }
                 }
 
-                if (Input.GetKeyDown(KeyCode.UpArrow))
+                if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
                 {
                     if (Grounded)
                     {
@@ -132,27 +132,35 @@ public class Movimiento_Jugador : MonoBehaviour
 
                 if (Grounded)
                     DoubleJump = true;
+
+                if (habilidades.recibiendo_danho)
+                {
+                    if (habilidades.demonio.modo_demonio)
+                    {
+                        animator.Play("daño_demonio");
+                    }
+                    else
+                    {
+                        animator.Play("daño_angel");
+                    }
+                }
             }
             else
             {
-                if (habilidades.demonio.modo_demonio)
+                if (habilidades.demonio.modo_demonio && !habilidades.recibiendo_danho)
                 {
-                    animator.Play("daño_demonio");
+                    animator.Play("ataque_demonio");
                 }
                 else
                 {
-                    animator.Play("daño_angel");
+                    animator.Play("atack_angel");
                 }
             }
         }
         else {
-            if (habilidades.demonio.modo_demonio)
+            if (!habilidades.demonio.modo_demonio)
             {
-                animator.Play("ataque_demonio");
-            }
-            else
-            {
-                animator.Play("ataque_demonio");
+                animator.Play("shield");
             }
         }
     }
@@ -161,7 +169,7 @@ public class Movimiento_Jugador : MonoBehaviour
     {
         is_jumping = true;
         puede_aterrizar = false;
-        if (habilidades.demonio.modo_demonio)
+        if (habilidades.demonio.modo_demonio && !habilidades.recibiendo_danho)
         {
             animator.Play("init_jump_demon");
             print("jump demon");
@@ -187,8 +195,7 @@ public class Movimiento_Jugador : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!habilidades.atacando)
-        if(!habilidades.recibiendo_danho)
+        if(!habilidades.atacando && !habilidades.usando_escudo)
         rigidbody2D.velocity = new Vector2(horizontal * Speed, rigidbody2D.velocity.y);
     }
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1954255004332868320}
   m_Layer: 0
   m_Name: PlataformaAtravesable
-  m_TagString: Untagged
+  m_TagString: plataforma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

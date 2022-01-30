@@ -11,20 +11,15 @@ public class DesplazarEnemigoHorizontal : MonoBehaviour
 	public float Velocidad = 1f;
 
 	private GameObject _LugarObjetivo;
-
+	public bool stunted = false;
 
 	// Se llama al inicio antes de la primera actualización de frames
 	void Start()
     {
 		UpdateObjetivo();
 		StartCoroutine("Patrullar");
+		stunted = false;
 	}
-
-	// La actualización se llama una vez por cuadro
-	void Update()
-    {
-        
-    }
 
 
 	private void UpdateObjetivo()
@@ -52,27 +47,87 @@ public class DesplazarEnemigoHorizontal : MonoBehaviour
 
 	private IEnumerator Patrullar()
 	{
-		// Co-rutina para mover el enemigo
-		while(Vector2.Distance(transform.position, _LugarObjetivo.transform.position) > 0.05f) {
-			// Se desplazará hasta el sitio objetivo
-			Vector2 direction = _LugarObjetivo.transform.position - transform.position;
-			float xDirection = direction.x;
+		if (!stunted)
+		{
+			// Co-rutina para mover el enemigo
+			GetComponent<Animator>().Play("caminar");
+			while (Vector2.Distance(transform.position, _LugarObjetivo.transform.position) > 0.05f)
+			{
+				// Se desplazará hasta el sitio objetivo
+				if (!stunted)
+				{
+					Vector2 direction = _LugarObjetivo.transform.position - transform.position;
+					float xDirection = direction.x;
+					transform.Translate(direction.normalized * Velocidad * Time.deltaTime);
+				}
+				else {
+					Invoke("Des_stunt", 1f);
+				}
 
-			transform.Translate(direction.normalized * Velocidad * Time.deltaTime);
+				yield return null;
+			}
+			if (stunted) {
+				StopAllCoroutines();
+				Invoke("Des_stunt", 1f);
+			}
 
-			yield return null;
+			// En este punto, se alcanzó el objetivo, se establece nuestra posición en la del objetivo.
+			//Debug.Log("Se alcanzo el Obejitvo");
+			transform.position = new Vector2(_LugarObjetivo.transform.position.x, transform.position.y);
+
+			// Esperamos un momento antes de volver a movernos
+			//Debug.Log("Esperando " + TiempoEspera + " segundos");
+			GetComponent<Animator>().Play("idle");
+			yield return new WaitForSeconds(TiempoEspera);
+
+			//Debug.Log("Se espera lo necesario para que termine y vuelva a empezar movimiento");
+			UpdateObjetivo();
+			StartCoroutine("Patrullar");
 		}
+		else {
+			StopAllCoroutines();
+			Invoke("Des_stunt", 1f);
+		}
+	}
 
-		// En este punto, se alcanzó el objetivo, se establece nuestra posición en la del objetivo.
-		//Debug.Log("Se alcanzo el Obejitvo");
-		transform.position = new Vector2(_LugarObjetivo.transform.position.x, transform.position.y);
-
-		// Esperamos un momento antes de volver a movernos
-		//Debug.Log("Esperando " + TiempoEspera + " segundos");
-		yield return new WaitForSeconds(TiempoEspera);
-
-		//Debug.Log("Se espera lo necesario para que termine y vuelva a empezar movimiento");
+	public void Des_stunt() {
+		GetComponent<Animator>().speed = 1;
+		stunted = false;
+		this.gameObject.tag = "Enemy";
 		UpdateObjetivo();
 		StartCoroutine("Patrullar");
 	}
+
+	public void Resume_patrullaje() {
+		StartCoroutine("Patrullar");
+	}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+		if (!stunted)
+		{
+			if (collision.CompareTag("Player"))
+			{
+				StopAllCoroutines();
+				GetComponent<Animator>().Play("atacar");
+			}
+
+			if (collision.CompareTag("WeaponPlayer"))
+			{
+				Destroy(this.gameObject);
+			}
+
+			if (collision.CompareTag("Stunt"))
+			{
+				stunted = true;
+				StopAllCoroutines();
+				Invoke("Des_stunt", 1f);
+				this.gameObject.tag = "Untagged";
+				GetComponent<Animator>().speed=0;
+			}
+		}
+		else {
+			Invoke("Des_stunt", 1f);
+		}
+    }
 }

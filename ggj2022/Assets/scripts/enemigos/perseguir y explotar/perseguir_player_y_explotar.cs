@@ -14,6 +14,8 @@ public class perseguir_player_y_explotar : MonoBehaviour
     [SerializeField] private float distancia_deteccion = 1f;
     [SerializeField] private GameObject area_explosion;
     private GameObject target;
+    public bool lanzado;
+    public bool stunted;
 
     [SerializeField]
     private AnimationCurve curve;
@@ -27,24 +29,32 @@ public class perseguir_player_y_explotar : MonoBehaviour
         explotado = false;
         en_rango = false;
         area_explosion.SetActive(false);
+        lanzado = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (stunted) return;
         if (Vector2.Distance(transform.position, target.transform.position) <= distancia_deteccion)
         {
             en_rango = true;
             start_position = transform.position;
+            if (!lanzado) {
+                GetComponent<Animator>().Play("iniciar lanzarse");
+                lanzado = true;
+            }
         }
         else {
             en_rango = false;
+            lanzado = false;
         }
 
         if (Vector2.Distance(transform.position, target.transform.position) <= distancia_explosion)
         {
             explotado = true;
-            area_explosion.SetActive(true);
+            GetComponent<Animator>().Play("explotar");
+            //area_explosion.SetActive(true);
         }
 
         if (en_rango && !explotado) {
@@ -53,6 +63,45 @@ public class perseguir_player_y_explotar : MonoBehaviour
             float percentageComplete = elapsed_time / desired_duration;
 
             transform.position = Vector2.Lerp(start_position, end_position, curve.Evaluate(percentageComplete));
+        }
+    }
+
+    public void Des_stunt()
+    {
+        GetComponent<Animator>().speed = 1;
+        stunted = false;
+        this.gameObject.tag = "Enemy";
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!stunted)
+        {
+            if (collision.CompareTag("Player"))
+            {
+                StopAllCoroutines();
+                GetComponent<Animator>().Play("atacar");
+            }
+
+            if (collision.CompareTag("WeaponPlayer"))
+            {
+                GetComponent<Animator>().Play("morir");
+                Destroy(this.gameObject);
+            }
+
+            if (collision.CompareTag("Stunt"))
+            {
+                stunted = true;
+                StopAllCoroutines();
+                Invoke("Des_stunt", 1f);
+                this.gameObject.tag = "Untagged";
+                GetComponent<Animator>().speed = 0;
+            }
+        }
+        else
+        {
+            Invoke("Des_stunt", 1f);
         }
     }
 }

@@ -13,15 +13,18 @@ public class DisparadorScript : MonoBehaviour
     public float tiempo_de_disparo;
     private float LastShoot;
 
+    public bool stunted;
+
     private void Start()
     {
+        stunted = false;
         player = GameObject.FindObjectOfType<habilidades_jugador>().gameObject;
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if (player == null) 
+        if (player == null || stunted) 
         {
             return;
         }
@@ -39,12 +42,12 @@ public class DisparadorScript : MonoBehaviour
 
         if (distance < 1.0f && Time.time > LastShoot + tiempo_de_disparo)
         {
-            Shoot();
+            GetComponent<Animator>().Play("disparar");
             LastShoot = Time.time;
         }
     }
 
-    private void Shoot()
+    public void Shoot()
     {
         Vector3 direction;
         if(transform.localScale.x == 1.0f) 
@@ -56,6 +59,7 @@ public class DisparadorScript : MonoBehaviour
         }
 
         GameObject bullet = Instantiate(BulletPrefab, transform.position, Quaternion.identity);
+        bullet.transform.localScale = transform.localScale/2;
         //bullet.GetComponent<BulletScript>().SetDirection(direction);
     }
 
@@ -69,6 +73,43 @@ public class DisparadorScript : MonoBehaviour
         if (Health == 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void Des_stunt()
+    {
+        GetComponent<Animator>().speed = 1;
+        stunted = false;
+        this.gameObject.tag = "Enemy";
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!stunted)
+        {
+            if (collision.CompareTag("Player"))
+            {
+                StopAllCoroutines();
+                GetComponent<Animator>().Play("atacar");
+            }
+
+            if (collision.CompareTag("WeaponPlayer"))
+            {
+                Destroy(this.gameObject);
+            }
+
+            if (collision.CompareTag("Stunt"))
+            {
+                stunted = true;
+                GetComponent<Animator>().speed = 0;
+                StopAllCoroutines();
+                Invoke("Des_stunt", 1f);
+                this.gameObject.tag = "Untagged";
+            }
+        }
+        else
+        {
+            Invoke("Des_stunt", 1f);
         }
     }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6158487659066697524}
   - component: {fileID: 6158487659066697521}
   - component: {fileID: 705122117}
+  - component: {fileID: 7133342900600780483}
   m_Layer: 0
   m_Name: patrulla horizontal
   m_TagString: Enemy
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7c47f86afdf49f94abf53ca72b831e90, type: 3}
+  m_Sprite: {fileID: 7275441547292510940, guid: 1656e6f7f622e5e40b53c480e1c23892, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -155,8 +156,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.10627084}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.26, y: 0.22}
+    pivot: {x: 0.5312622, y: 0.41278774}
+    oldSize: {x: 0.21978675, y: 0.26875}
     newSize: {x: 0.26, y: 0.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -165,3 +166,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.09121799, y: 0.0074583143}
   m_EdgeRadius: 0
+--- !u!95 &7133342900600780483
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6158487659066696911}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cef25b72aaad473479c6cb5f2304a506, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
