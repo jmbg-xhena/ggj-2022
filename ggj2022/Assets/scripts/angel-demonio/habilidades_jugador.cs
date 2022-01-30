@@ -164,7 +164,7 @@ public class habilidades_jugador : MonoBehaviour
         invencible = false;
     }
 
-    public void dejar_de_recibir_da�o() {
+    public void dejar_de_recibir_danho() {
         recibiendo_danho = false;
     }
 
