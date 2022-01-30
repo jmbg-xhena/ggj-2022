@@ -19,7 +19,11 @@ public class PlataformaAtravesable : MonoBehaviour
         {
             WaitTime = 0.5f;
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            WaitTime = 0.5f;
+        }
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             if(WaitTime <= 0)
             {
@@ -30,7 +34,7 @@ public class PlataformaAtravesable : MonoBehaviour
                 WaitTime -= Time.deltaTime;
             }
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             effector.rotationalOffset = 0;
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 
 public class habilidades_jugador : MonoBehaviour
@@ -67,6 +68,10 @@ public class habilidades_jugador : MonoBehaviour
         hp = max_hp;
     }
 
+    public void Over() {
+        SceneManager.LoadScene("GameOver");
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -75,6 +80,7 @@ public class habilidades_jugador : MonoBehaviour
         if (hp <= 0) {
 
             muerto = true;
+            Over();
         }
 
         Meele_atack();
