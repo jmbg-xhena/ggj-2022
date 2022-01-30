@@ -41,6 +41,7 @@ public class perseguir_player_y_explotar : MonoBehaviour
             en_rango = true;
             start_position = transform.position;
             if (!lanzado) {
+
                 GetComponent<Animator>().Play("iniciar lanzarse");
                 lanzado = true;
             }
@@ -52,6 +53,7 @@ public class perseguir_player_y_explotar : MonoBehaviour
 
         if (Vector2.Distance(transform.position, target.transform.position) <= distancia_explosion)
         {
+
             explotado = true;
             GetComponent<Animator>().Play("explotar");
             //area_explosion.SetActive(true);

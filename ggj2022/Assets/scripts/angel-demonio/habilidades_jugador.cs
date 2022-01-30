@@ -48,6 +48,7 @@ public class habilidades_jugador : MonoBehaviour
     public float hp_loss_enemy_damage;
     private Rigidbody2D rigidbody;
     public bool recibiendo_danho = false;
+    public bool muerto = false;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +56,7 @@ public class habilidades_jugador : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         demonio = GetComponent<Modo_demonio>();
         demonio.modo_demonio = false;
+        muerto = false;
         invencible = false;
         demonio.berserker = false;
         recibiendo_danho = false;
@@ -68,6 +70,13 @@ public class habilidades_jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (muerto) return;
+
+        if (hp <= 0) {
+
+            muerto = true;
+        }
+
         Meele_atack();
         demonio.Cambiar_modo();
         if (demonio.modo_demonio) //habilidades demonio
@@ -182,6 +191,7 @@ public class habilidades_jugador : MonoBehaviour
     {
         GameObject go = collision.gameObject;
         if ((go.CompareTag("Enemy") || go.CompareTag("Spikes")|| go.CompareTag("ProjectileEnemy")) && !invencible) {
+
             if (demonio.modo_demonio)
             {
                 if (mp > mp_loss_enemy_damage)

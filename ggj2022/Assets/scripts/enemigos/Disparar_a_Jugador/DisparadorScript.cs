@@ -50,6 +50,7 @@ public class DisparadorScript : MonoBehaviour
     public void Shoot()
     {
         Vector3 direction;
+
         if(transform.localScale.x == 1.0f) 
         {
             direction = Vector2.right;
