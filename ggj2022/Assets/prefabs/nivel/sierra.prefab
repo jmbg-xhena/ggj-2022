@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 7831883081907587501}
   - component: {fileID: 7831883081907587500}
   m_Layer: 0
-  m_Name: Rotacion
+  m_Name: sierra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
