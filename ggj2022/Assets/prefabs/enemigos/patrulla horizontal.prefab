@@ -119,6 +119,8 @@ MonoBehaviour:
   maxX: -5
   TiempoEspera: 0.5
   Velocidad: 1
+  Enemy_death: {fileID: 8300000, guid: 2818a795ce7b556408c83217f37d6dc8, type: 3}
+  stunted: 0
 --- !u!50 &6158487659066697521
 Rigidbody2D:
   serializedVersion: 4

@@ -9,6 +9,7 @@ public class DesplazarEnemigoVertical : MonoBehaviour
 	public float maxY;
 	public float TiempoEspera = 5f;
 	public float Velocidad = 1f;
+	public AudioClip Enemy_death;
 
 	private GameObject _LugarObjetivo;
 	public bool stunted;
@@ -108,6 +109,7 @@ public class DesplazarEnemigoVertical : MonoBehaviour
 			if (collision.CompareTag("WeaponPlayer"))
 			{
 				Destroy(this.gameObject);
+				Camera.main.GetComponent<AudioSource>().PlayOneShot(Enemy_death);
 			}
 
 			if (collision.CompareTag("Stunt"))

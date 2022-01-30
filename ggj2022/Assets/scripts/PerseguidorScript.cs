@@ -8,8 +8,7 @@ public class PerseguidorScript : MonoBehaviour
     public float speed;
     public float stoppingDistance;
     public float monster_damage;
-    public AudioClip Sound;
-    public AudioClip Hit_Sound;
+    public AudioClip Enemy_death;
     public float knockTime;
     public float thrustForce;
     private Transform target;
@@ -88,8 +87,6 @@ public class PerseguidorScript : MonoBehaviour
             if (Time.time > LastHit + 2f)
             {
                 Debug.Log("Hit!!");
-                Camera.main.GetComponent<AudioSource>().PlayOneShot(Sound);
-                Camera.main.GetComponent<AudioSource>().PlayOneShot(Hit_Sound);
                 player.hp -= monster_damage;
                 player.Knock(GetComponent<Rigidbody2D>(), knockTime, thrustForce);
                 LastHit = Time.time;
@@ -108,6 +105,7 @@ public class PerseguidorScript : MonoBehaviour
             if (collision.CompareTag("WeaponPlayer"))
             {
                 Destroy(this.gameObject);
+                Camera.main.GetComponent<AudioSource>().PlayOneShot(Enemy_death);
             }
 
             if (collision.CompareTag("Stunt"))

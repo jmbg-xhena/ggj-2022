@@ -157,7 +157,7 @@ MonoBehaviour:
   speed: 0.4
   stoppingDistance: 0.1
   monster_damage: 1
-  Sound: {fileID: 8300000, guid: 413810f38fae660438bb565124024327, type: 3}
-  Hit_Sound: {fileID: 8300000, guid: c0f4ee757e4ef6b43b6bcd742c83b2a6, type: 3}
+  Enemy_death: {fileID: 8300000, guid: 2818a795ce7b556408c83217f37d6dc8, type: 3}
   knockTime: 1
   thrustForce: 1
+  stunted: 0

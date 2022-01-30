@@ -7,7 +7,6 @@ public class DisparadorScript : MonoBehaviour
     public GameObject BulletPrefab;
     public GameObject player;
     public int Health;
-    public AudioClip Dmg_sound_effect;
     public AudioClip Enemy_scream;
     public AudioClip Enemy_death;
     public float tiempo_de_disparo;
@@ -65,14 +64,13 @@ public class DisparadorScript : MonoBehaviour
 
     public void Hit()
     {
-        Camera.main.GetComponent<AudioSource>().PlayOneShot(Dmg_sound_effect);
         Camera.main.GetComponent<AudioSource>().PlayOneShot(Enemy_scream);
-        Camera.main.GetComponent<AudioSource>().PlayOneShot(Enemy_death);
 
         Health = Health - 1;
         if (Health == 0)
         {
             Destroy(gameObject);
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(Enemy_death);
         }
     }
 
