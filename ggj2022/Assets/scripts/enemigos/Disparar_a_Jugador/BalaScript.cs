@@ -55,7 +55,7 @@ public class BalaScript : MonoBehaviour
             Debug.Log("Hit!!");
             Camera.main.GetComponent<AudioSource>().PlayOneShot(Bullet_Dmg_Sound);
             Camera.main.GetComponent<AudioSource>().PlayOneShot(Hit_Sound);
-            player.hp -= bullet_damage;
+            //player.hp -= bullet_damage;
             DestroyBullet();
         }
         /*if(grunt != null)

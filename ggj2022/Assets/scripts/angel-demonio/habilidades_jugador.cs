@@ -22,7 +22,8 @@ public class habilidades_jugador : MonoBehaviour
     public float weapon_time = 0.5f;
     public float cooldown_weapon;
     public bool puede_usar_weapon;
-    
+    public bool atacando;
+
     [Header("shield")]
     public GameObject shield;
     public float shield_time = 0.5f;
@@ -44,7 +45,8 @@ public class habilidades_jugador : MonoBehaviour
     [Header("enemy damage")]
     public float mp_loss_enemy_damage;
     public float hp_loss_enemy_damage;
-    private Rigidbody2D rigidbody; 
+    private Rigidbody2D rigidbody;
+    public bool recibiendo_danho = false;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +55,8 @@ public class habilidades_jugador : MonoBehaviour
         demonio = GetComponent<Modo_demonio>();
         demonio.modo_demonio = false;
         invencible = false;
+        demonio.berserker = false;
+        recibiendo_danho = false;
         puede_usar_weapon = true;
         puede_usar_shield = true;
         mp = max_mp;
@@ -83,6 +87,7 @@ public class habilidades_jugador : MonoBehaviour
                 mp -= mp_loss_over_time * Time.deltaTime;//perder barra de demonio con el tiempo
             }
             else {
+                demonio.berserker = true;
                 hp -= (hp_loss_over_time - mp) * Time.deltaTime;//usar barra de vida cuando la de demonio se acabe
                 mp = 0;
             }
@@ -91,10 +96,11 @@ public class habilidades_jugador : MonoBehaviour
 
     void Meele_atack() {
         if (Input.GetKeyDown(KeyCode.Space) && puede_usar_weapon && !shield.activeSelf) { // si el jugdor puede usar su arma y si presiono espacio
+            atacando = true;
             puede_usar_weapon = false;//activar cooldown
             weapon.SetActive(true);//activar arma
             Invoke("Desactivar_arma", weapon_time);//mandar a desactivar el arma
-            
+
             if (demonio.modo_demonio)
             {//ataque fuerte
                 if (mp > mp_loss_melee_atack)//si la barra demonio no esta vacia
@@ -140,10 +146,6 @@ public class habilidades_jugador : MonoBehaviour
         Invoke("End_cooldown_escudo", cooldown_shield);
     }
 
-    void Deshacer_invencible() {
-        invencible = false;
-    }
-
     public void Recuperar_Barra_demonio(float recuperar) {
         if (mp < max_mp) {
             mp += recuperar;
@@ -155,6 +157,19 @@ public class habilidades_jugador : MonoBehaviour
         {
             mp += recuperar*Time.deltaTime;
         }
+    }
+
+    void Deshacer_invencible()
+    {
+        invencible = false;
+    }
+
+    public void dejar_de_recibir_da�o() {
+        recibiendo_danho = false;
+    }
+
+    public void dejar_de_atacar() {
+        atacando = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -176,6 +191,7 @@ public class habilidades_jugador : MonoBehaviour
                 hp -= hp_loss_enemy_damage;
             }
             invencible = true;
+            recibiendo_danho = true;
             Invoke("Deshacer_invencible",tiempo_invencible);
         }
     }
