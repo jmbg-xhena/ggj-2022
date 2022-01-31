@@ -96,7 +96,6 @@ public class habilidades_jugador : MonoBehaviour
         demonio.Cambiar_modo();
         if (demonio.modo_demonio) //habilidades demonio
         {
-            Camera.main.GetComponent<AudioSource>().PlayOneShot(jugador_derrotado);
             Drenado_barra_demonio();
             weapon.tag = "WeaponPlayer";
         }

@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7885407853360430885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.229, y: -0.024, z: 0}
+  m_LocalPosition: {x: -2.229, y: -0.024, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -119,7 +119,6 @@ MonoBehaviour:
   BulletPrefab: {fileID: 6811205694637005348, guid: 8ec73650bb07a1c448c77cf6f9f4fc1f, type: 3}
   player: {fileID: 0}
   Health: 1
-  Dmg_sound_effect: {fileID: 0}
   Enemy_scream: {fileID: 8300000, guid: 254538958782bff47962d7d4778d6377, type: 3}
   Enemy_death: {fileID: 8300000, guid: 2818a795ce7b556408c83217f37d6dc8, type: 3}
   tiempo_de_disparo: 2
