@@ -48,6 +48,7 @@ public class DisparadorScript : MonoBehaviour
 
     public void Shoot()
     {
+        Camera.main.GetComponent<AudioSource>().PlayOneShot(Enemy_scream);
         Vector3 direction;
 
         if(transform.localScale.x == 1.0f) 
@@ -70,8 +71,8 @@ public class DisparadorScript : MonoBehaviour
         Health = Health - 1;
         if (Health == 0)
         {
-            Destroy(gameObject);
             Camera.main.GetComponent<AudioSource>().PlayOneShot(Enemy_death);
+            Destroy(gameObject);
         }
     }
 
@@ -94,6 +95,7 @@ public class DisparadorScript : MonoBehaviour
 
             if (collision.CompareTag("WeaponPlayer"))
             {
+                Camera.main.GetComponent<AudioSource>().PlayOneShot(Enemy_death);
                 Destroy(this.gameObject);
             }
 

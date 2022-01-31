@@ -88,7 +88,8 @@ public class habilidades_jugador : MonoBehaviour
         if (hp <= 0) {
 
             muerto = true;
-            Over();
+            GetComponent<AudioSource>().PlayOneShot(jugador_derrotado);
+            Invoke("Over", 0.5f);
         }
 
         Meele_atack();
@@ -131,7 +132,7 @@ public class habilidades_jugador : MonoBehaviour
 
             if (demonio.modo_demonio)
             {//ataque fuerte
-                Camera.main.GetComponent<AudioSource>().PlayOneShot(jugador_woosh);
+                GetComponent<AudioSource>().PlayOneShot(jugador_woosh);
                 if (mp > mp_loss_melee_atack)//si la barra demonio no esta vacia
                 {
                     mp -= mp_loss_melee_atack;//perder barra de demonio con el ataque
@@ -207,7 +208,7 @@ public class habilidades_jugador : MonoBehaviour
     {
         GameObject go = collision.gameObject;
         if ((go.CompareTag("Enemy") || go.CompareTag("Spikes")|| go.CompareTag("ProjectileEnemy")) && !invencible) {
-
+            GetComponent<AudioSource>().PlayOneShot(jugador_ouch);
             if (demonio.modo_demonio)
             {
                 if (mp > mp_loss_enemy_damage)
@@ -215,7 +216,6 @@ public class habilidades_jugador : MonoBehaviour
                     mp -= mp_loss_enemy_damage;
                 }
                 else {
-                    Camera.main.GetComponent<AudioSource>().PlayOneShot(jugador_ouch);
                     hp -= hp_loss_enemy_damage - mp;//usar barra de vida cuando la de demonio se acabe
                     mp = 0;
                 }

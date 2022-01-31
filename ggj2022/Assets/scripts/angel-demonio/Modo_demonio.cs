@@ -29,11 +29,11 @@ public class Modo_demonio : MonoBehaviour
                 {
                     berserker = false;
                     //a angel
-                    Camera.main.GetComponent<AudioSource>().PlayOneShot(a_angel);
+                    GetComponent<AudioSource>().PlayOneShot(a_angel);
                 }else
                 {
                     //a demonio
-                    Camera.main.GetComponent<AudioSource>().PlayOneShot(a_demonio);
+                    GetComponent<AudioSource>().PlayOneShot(a_demonio);
                 }
                 modo_demonio = !modo_demonio;
                 puede_cambiar_de_modo = false;

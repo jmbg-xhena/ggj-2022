@@ -93,9 +93,9 @@ public class perseguir_player_y_explotar : MonoBehaviour
 
             if (collision.CompareTag("WeaponPlayer"))
             {
-                GetComponent<Animator>().Play("morir");
-                Destroy(this.gameObject);
                 Camera.main.GetComponent<AudioSource>().PlayOneShot(Enemy_death);
+                GetComponent<Animator>().Play("morir");
+                Destroy(this.gameObject, 0.1f);
             }
 
             if (collision.CompareTag("Stunt"))

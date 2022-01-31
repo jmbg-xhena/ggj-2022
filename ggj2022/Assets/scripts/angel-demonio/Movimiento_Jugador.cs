@@ -20,6 +20,10 @@ public class Movimiento_Jugador : MonoBehaviour
     public bool puede_aterrizar;
     public bool Grounded;
 
+    public AudioClip jugador_aterrizar;
+    public AudioClip jugador_primer_salto;
+    public AudioClip jugador_segundo_salto;
+
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -93,6 +97,7 @@ public class Movimiento_Jugador : MonoBehaviour
                 }
 
 
+
                 Debug.DrawRay(transform.position, Vector3.down * 0.125f, Color.red);
                 if (Physics2D.Raycast(transform.position, Vector3.down, 0.125f))
                 {
@@ -119,10 +124,12 @@ public class Movimiento_Jugador : MonoBehaviour
                 {
                     if (Grounded)
                     {
+                        GetComponent<AudioSource>().PlayOneShot(jugador_primer_salto);
                         Jump();
                     }
                     else if (DoubleJump && (!habilidades.demonio.modo_demonio || habilidades.demonio.berserker))
                     {
+                        GetComponent<AudioSource>().PlayOneShot(jugador_segundo_salto);
                         rigidbody2D.AddForce(Vector2.zero);
                         Jump();
                         DoubleJump = false;
@@ -163,6 +170,10 @@ public class Movimiento_Jugador : MonoBehaviour
                 animator.Play("shield");
             }
         }
+    }
+
+    public void aterrizar() {
+        GetComponent<AudioSource>().PlayOneShot(jugador_aterrizar);
     }
 
     private void Jump()

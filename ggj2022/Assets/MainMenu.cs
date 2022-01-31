@@ -19,10 +19,20 @@ public class MainMenu : MonoBehaviour
 
     public void Escena_Juego()
     {
+        Invoke("Cargar_jergo", 0.5f);
+    }
+
+    public void Cargar_jergo()
+    {
         SceneManager.LoadScene("Juego");
     }
 
     public void Escena_Creditos()
+    {
+        Invoke("Cargar_creditos", 0.5f);
+    }
+
+    public void Cargar_creditos()
     {
         SceneManager.LoadScene("Creditos");
     }

@@ -108,8 +108,8 @@ public class DesplazarEnemigoVertical : MonoBehaviour
 
 			if (collision.CompareTag("WeaponPlayer"))
 			{
-				Destroy(this.gameObject);
 				Camera.main.GetComponent<AudioSource>().PlayOneShot(Enemy_death);
+				Destroy(this.gameObject);
 			}
 
 			if (collision.CompareTag("Stunt"))
